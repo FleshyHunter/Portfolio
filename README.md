@@ -1,4 +1,4 @@
-# Marcus Lim — Portfolio
+# Aaron Lim — Portfolio
 
 React + Vite + Tailwind + React Router. Dark "Apple-style" homepage with a
 featured project spotlight and per-project detail pages at `/work/:slug`.

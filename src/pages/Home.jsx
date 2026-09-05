@@ -19,23 +19,18 @@ import { featuredProject, sideProjects } from "../data/projects.js";
 
 const TIMELINE = [
   {
-    date: "2023 — 2027",
+    date: "2024 — 2028",
     icon: <GraduationCap className="w-4 h-4 text-zinc-500" />,
-    title: "B.Comp (Computer Science), NUS",
-    desc: "Specialising in Artificial Intelligence. Coursework in ML, NLP, and systems.",
+    title: "B.Comp (Business Artificial Intelligence Systems), NUS",
+    desc: "Specialising in Artificial Intelligence. Coursework in AI, ML, Full-Stack Development and Systems Architecture.",
   },
   {
     date: "Summer 2026",
     icon: <Briefcase className="w-4 h-4 text-zinc-500" />,
-    title: "ML Engineering Intern — [Company]",
+    title: "QA Engineering Intern — [IDEMIA Public Security]",
     desc: "Built and evaluated model pipelines used in a production recommendation system.",
   },
-  {
-    date: "2025",
-    icon: <Trophy className="w-4 h-4 text-zinc-500" />,
-    title: "1st place, NUS AI Hackathon",
-    desc: "Led a team of four to build an interpretable triage model in 48 hours.",
-  },
+  
 ];
 
 export default function Home() {
@@ -66,7 +61,7 @@ export default function Home() {
             className="hero-in text-sm font-medium text-blue-500 mb-5"
             style={{ animationDelay: "0.05s" }}
           >
-            NUS Computer Science · Class of 2027
+            NUS Business Artificial Intelligence Systems · Class of 2028
           </p>
           <h1
             className="hero-in text-5xl md:text-7xl font-semibold tracking-tight leading-tight text-white"
