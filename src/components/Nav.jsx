@@ -31,7 +31,7 @@ export default function Nav() {
           to="/"
           className="text-sm font-semibold tracking-tight text-white"
         >
-          Marcus Lim
+          Aaron Lim
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
           {NAV_LINKS.map((link) => (

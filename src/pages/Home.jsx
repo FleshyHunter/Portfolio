@@ -293,10 +293,10 @@ export default function Home() {
           problems. I usually reply within a day.
         </p>
         <a
-          href="mailto:marcus.lim@u.nus.edu"
+          href="mailto:aaronlyd03@gmail.com"
           className="inline-flex items-center gap-2 bg-white text-black text-sm font-medium rounded-full px-7 py-3 hover:bg-zinc-200 transition-colors"
         >
-          <Mail className="w-4 h-4" /> marcus.lim@u.nus.edu
+          <Mail className="w-4 h-4" /> aaronlyd03@gmail.com
         </a>
       </section>
 
