@@ -19,7 +19,7 @@ export const projects = [
   },
   {
     slug: "nucleus",
-    title: "Nucleus — an agent pipeline that checks its own claims",
+    title: "Nucleus — an AI pipeline that fixes weak product listings",
     tag: "AI Engineering",
     summary:
       "A group project helping companies fix weak product descriptions — a two-agent pipeline that finds content gaps with TF-IDF retrieval and rewrites them with LLM-generated copy, verified against spec before anything ships.",
@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     slug: "cinevillage",
-    title: "CineVillage — a cinema platform that doesn't double-book",
+    title: "CineVillage — a full cinema chain, simulated end to end",
     tag: "Full-Stack",
     summary:
       "A fully simulated cinema chain, modeled on players like Shaw Theatres — an EJS admin console plus a React customer app, with real-time movie data and a complete Stripe checkout flow.",

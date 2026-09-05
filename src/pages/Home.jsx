@@ -20,6 +20,11 @@ import Nav from "../components/Nav.jsx";
 import Footer from "../components/Footer.jsx";
 import NeuralGraphic from "../components/NeuralGraphic.jsx";
 import { featuredProject, sideProjects } from "../data/projects.js";
+import { experiences } from "../data/experience.js";
+
+const idemiaExperience = experiences.find(
+  (e) => e.slug === "idemia-public-security"
+);
 
 const TIMELINE = [
   {
@@ -29,12 +34,12 @@ const TIMELINE = [
     desc: "Specialising in Artificial Intelligence. Coursework in AI, ML, Full-Stack Development and Systems Architecture.",
   },
   {
-    date: "Summer 2026",
+    date: idemiaExperience.timeline,
     icon: <Briefcase className="w-4 h-4 text-zinc-500" />,
-    title: "QA Engineering Intern — [IDEMIA Public Security]",
-    desc: "Solo architected and engineered an AI automation tool that reduces manual labour in QA systems.",
+    title: idemiaExperience.title,
+    desc: idemiaExperience.summary,
+    slug: idemiaExperience.slug,
   },
-  
 ];
 
 export default function Home() {
@@ -326,6 +331,14 @@ export default function Home() {
                   <p className="text-zinc-500 text-sm leading-relaxed">
                     {item.desc}
                   </p>
+                  {item.slug && (
+                    <Link
+                      to={`/experience/${item.slug}`}
+                      className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-blue-500 hover:text-blue-400 transition-colors"
+                    >
+                      View experience <ArrowUpRight className="w-4 h-4" />
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

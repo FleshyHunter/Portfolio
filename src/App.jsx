@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
+import ExperienceDetail from "./pages/ExperienceDetail.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
 // Section links pass { scrollTo: "<id>" } via router state instead of a
@@ -37,6 +38,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work/:slug" element={<ProjectDetail />} />
+        <Route path="/experience/:slug" element={<ExperienceDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
