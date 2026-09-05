@@ -1,22 +1,30 @@
-import React, { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
 import NotFound from "./pages/NotFound.jsx";
 
-function ScrollToHash() {
-  const { hash, pathname } = useLocation();
+// Section links pass { scrollTo: "<id>" } via router state instead of a
+// URL hash, so the address bar never shows a "#section" fragment.
+function ScrollManager() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const prevPathname = useRef(location.pathname);
 
   useEffect(() => {
-    if (hash) {
-      const el = document.querySelector(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        return;
-      }
+    const targetId = location.state?.scrollTo;
+    if (targetId) {
+      document
+        .getElementById(targetId)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      navigate(location.pathname, { replace: true, state: {} });
+      return;
     }
-    window.scrollTo(0, 0);
-  }, [hash, pathname]);
+    if (prevPathname.current !== location.pathname) {
+      window.scrollTo(0, 0);
+    }
+    prevPathname.current = location.pathname;
+  }, [location, navigate]);
 
   return null;
 }
@@ -24,7 +32,7 @@ function ScrollToHash() {
 export default function App() {
   return (
     <>
-      <ScrollToHash />
+      <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work/:slug" element={<ProjectDetail />} />

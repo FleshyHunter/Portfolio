@@ -75,28 +75,27 @@ export default function Home() {
             className="hero-in mt-6 text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed"
             style={{ animationDelay: "0.3s" }}
           >
-            I build AI systems that ship RAG pipelines, agentic tools, and
-            the infrastructure that holds them together. Right now I'm
-            exploring newer AI engineering techniques through hands-on
-            projects while deepening my grip on core ML — support vector
-            machines, neural networks, reinforcement learning.
+            I build AI systems that ship agentic workflows, RAG pipelines, agentic tools, and
+            the infrastructure that holds them together. Right now I'm exploring newer AI engineering techniques while deepening my grip on core ML 
           </p>
           <div
             className="hero-in mt-9 flex items-center justify-center gap-6"
             style={{ animationDelay: "0.45s" }}
           >
-            <a
-              href="#projects"
+            <Link
+              to="/"
+              state={{ scrollTo: "projects" }}
               className="bg-white text-black text-sm font-medium rounded-full px-6 py-2.5 hover:bg-zinc-200 transition-colors"
             >
               View my projects
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/"
+              state={{ scrollTo: "contact" }}
               className="text-sm font-medium text-blue-500 hover:text-blue-400 flex items-center gap-1 transition-colors"
             >
               Get in touch <ChevronRight className="w-4 h-4" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -180,7 +179,7 @@ export default function Home() {
 
       {/* FEATURED PROJECT — dark spotlight, real link */}
       {featuredProject && (
-        <section id="work" className="bg-black py-24 md:py-28 px-6 border-t border-zinc-900">
+        <section id="projects" className="bg-black py-24 md:py-28 px-6 border-t border-zinc-900">
           <div className="max-w-5xl mx-auto">
             <p className="text-sm font-medium text-blue-500 mb-4">
               Featured project

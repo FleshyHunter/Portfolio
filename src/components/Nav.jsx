@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NAV_LINKS = [
-  { label: "About", href: "/#about" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", id: "about" },
+  { label: "Projects", id: "projects" },
+  { label: "Experience", id: "experience" },
+  { label: "Contact", id: "contact" },
 ];
 
 export default function Nav() {
@@ -35,21 +35,23 @@ export default function Nav() {
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to="/"
+              state={{ scrollTo: link.id }}
               className="hover:text-white transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
-        <a
-          href="/#contact"
+        <Link
+          to="/"
+          state={{ scrollTo: "contact" }}
           className="text-sm font-medium bg-white text-black rounded-full px-4 py-1.5 hover:bg-zinc-200 transition-colors"
         >
           Resume
-        </a>
+        </Link>
       </div>
     </nav>
   );
