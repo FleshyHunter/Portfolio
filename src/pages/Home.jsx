@@ -347,7 +347,7 @@ export default function Home() {
             href="mailto:aaronlyd03@gmail.com"
             className="inline-flex items-center gap-2 bg-white text-black text-sm font-medium rounded-full px-7 py-3 hover:bg-zinc-200 transition-colors"
           >
-            <Mail className="w-4 h-4" /> aaronlyd03@gmail.com
+            <Mail className="w-4 h-4" /> Gmail
           </a>
           <a
             href="https://www.linkedin.com/in/aaronlyd03/?skipRedirect=true"
