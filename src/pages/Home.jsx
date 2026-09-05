@@ -136,7 +136,16 @@ export default function Home() {
                 impressive in a demo.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Ollama", "Dify", "ChromaDB", "HuggingFace", "Whisper"].map((t) => (
+                {[
+                  "Ollama",
+                  "Dify",
+                  "ChromaDB",
+                  "HuggingFace",
+                  "Whisper",
+                  "Sentence Transformers",
+                  "all-MiniLM-L6-v2",
+                  "Tesseract OCR",
+                ].map((t) => (
                   <span
                     key={t}
                     className="text-xs font-medium text-zinc-300 border border-zinc-700 rounded-full px-3 py-1"
@@ -333,28 +342,28 @@ export default function Home() {
           Open to internships, research collaborations, and interesting
           problems. I usually reply within a day.
         </p>
-        <a
-          href="mailto:aaronlyd03@gmail.com"
-          className="inline-flex items-center gap-2 bg-white text-black text-sm font-medium rounded-full px-7 py-3 hover:bg-zinc-200 transition-colors"
-        >
-          <Mail className="w-4 h-4" /> aaronlyd03@gmail.com
-        </a>
-        <div className="mt-6 flex items-center justify-center gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://github.com/FleshyHunter"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-white transition-colors"
+            href="mailto:aaronlyd03@gmail.com"
+            className="inline-flex items-center gap-2 bg-white text-black text-sm font-medium rounded-full px-7 py-3 hover:bg-zinc-200 transition-colors"
           >
-            <Github className="w-4 h-4" /> GitHub
+            <Mail className="w-4 h-4" /> aaronlyd03@gmail.com
           </a>
           <a
             href="https://www.linkedin.com/in/aaronlyd03/?skipRedirect=true"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 bg-white text-black text-sm font-medium rounded-full px-7 py-3 hover:bg-zinc-200 transition-colors"
           >
             <Linkedin className="w-4 h-4" /> LinkedIn
+          </a>
+          <a
+            href="https://github.com/FleshyHunter"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-white text-black text-sm font-medium rounded-full px-7 py-3 hover:bg-zinc-200 transition-colors"
+          >
+            <Github className="w-4 h-4" /> GitHub
           </a>
         </div>
       </section>
