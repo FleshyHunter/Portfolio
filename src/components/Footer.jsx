@@ -10,7 +10,7 @@ export default function Footer() {
         </p>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/FleshyHunter"
             target="_blank"
             rel="noreferrer"
             className="text-zinc-600 hover:text-white transition-colors"
@@ -18,7 +18,7 @@ export default function Footer() {
             <Github className="w-4 h-4" />
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/aaronlyd03/?skipRedirect=true"
             target="_blank"
             rel="noreferrer"
             className="text-zinc-600 hover:text-white transition-colors"

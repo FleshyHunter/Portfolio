@@ -45,13 +45,14 @@ export default function Nav() {
             </Link>
           ))}
         </div>
-        <Link
-          to="/"
-          state={{ scrollTo: "contact" }}
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noreferrer"
           className="text-sm font-medium bg-white text-black rounded-full px-4 py-1.5 hover:bg-zinc-200 transition-colors"
         >
           Resume
-        </Link>
+        </a>
       </div>
     </nav>
   );

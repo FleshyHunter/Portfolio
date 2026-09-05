@@ -27,7 +27,7 @@ describe("Home", () => {
 
   it("renders every secondary project as a link, not a dead anchor", () => {
     renderHome();
-    const moreProjectsHeading = screen.getByText("More projects");
+    const moreProjectsHeading = screen.getByText("Relevant projects");
     const section = moreProjectsHeading.closest("section");
     const links = section.querySelectorAll("a");
     expect(links.length).toBeGreaterThan(0);

@@ -17,6 +17,7 @@ function ScrollManager() {
       document
         .getElementById(targetId)
         ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      prevPathname.current = location.pathname;
       navigate(location.pathname, { replace: true, state: {} });
       return;
     }

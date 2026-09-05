@@ -13,6 +13,8 @@ import {
   GraduationCap,
   Briefcase,
   Trophy,
+  Github,
+  Linkedin,
 } from "lucide-react";
 import Nav from "../components/Nav.jsx";
 import Footer from "../components/Footer.jsx";
@@ -30,7 +32,7 @@ const TIMELINE = [
     date: "Summer 2026",
     icon: <Briefcase className="w-4 h-4 text-zinc-500" />,
     title: "QA Engineering Intern — [IDEMIA Public Security]",
-    desc: "Built and evaluated model pipelines used in a production recommendation system.",
+    desc: "Solo architected and engineered an AI automation tool that reduces manual labour in QA systems.",
   },
   
 ];
@@ -275,7 +277,7 @@ export default function Home() {
       <section className="py-20 md:py-24 px-6 bg-black">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl font-semibold tracking-tight mb-8 text-white">
-            More projects
+            Relevant projects
           </h2>
           <div className="divide-y divide-zinc-900 border-t border-b border-zinc-900">
             {sideProjects.map((p) => (
@@ -337,6 +339,24 @@ export default function Home() {
         >
           <Mail className="w-4 h-4" /> aaronlyd03@gmail.com
         </a>
+        <div className="mt-6 flex items-center justify-center gap-6">
+          <a
+            href="https://github.com/FleshyHunter"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-white transition-colors"
+          >
+            <Github className="w-4 h-4" /> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/aaronlyd03/?skipRedirect=true"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-white transition-colors"
+          >
+            <Linkedin className="w-4 h-4" /> LinkedIn
+          </a>
+        </div>
       </section>
 
       <Footer />

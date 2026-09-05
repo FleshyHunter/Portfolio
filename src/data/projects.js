@@ -1,7 +1,7 @@
 export const projects = [
   {
     slug: "odin-tutorbot",
-    title: "Odin TutorBot — a AI tutoring platform with a real harness",
+    title: "Odin TutorBot — an AI tutoring platform with a real harness",
     tag: "AI Engineering",
     summary:
       "A self-hosted tutoring platform with a Rust/Axum backend, multi-source RAG, and an agentic loop that knows when to reach for a tool.",
@@ -22,16 +22,16 @@ export const projects = [
     title: "Nucleus — an agent pipeline that checks its own claims",
     tag: "AI Engineering",
     summary:
-      "A two-agent pipeline that finds content gaps with TF-IDF retrieval and fixes them with LLM-generated edits — verified against spec before anything ships.",
+      "A group project helping companies fix weak product descriptions — a two-agent pipeline that finds content gaps with TF-IDF retrieval and rewrites them with LLM-generated copy, verified against spec before anything ships.",
     role: "AI Engineering",
     stack: "Python, FastAPI, Pydantic, OpenAI API, TF-IDF",
     impact: "82 tests, 18 gaps surfaced",
     timeline: "Aug 2026",
     featured: false,
     body: [
-      "Nucleus started as a way to close a very specific gap: storefronts with missing or thin content, and no efficient way to find and fix them at scale.",
-      "I built a two-agent pipeline — one agent applies TF-IDF retrieval to surface content gaps, the other uses the OpenAI API to generate replacement content via batch edits. It surfaced 18 classified gaps across 8 personas in testing.",
-      "The part I'm proudest of is a code check that verifies LLM claims against the actual specs before they ship — it caught a fabricated claim live, exactly the failure mode it was built to catch. The pipeline's JSON data contracts are validated end-to-end through 82 tests plus live OpenAI checks.",
+      "Nucleus is a group project built to solve a concrete problem for companies: weak or missing product descriptions that keep good products from reaching the customers actually searching for them.",
+      "My focus was the AI engineering: a two-agent pipeline where one agent applies TF-IDF retrieval to surface content gaps, and the other uses the OpenAI API to generate replacement descriptions via batch edits. It surfaced 18 classified gaps across 8 personas in testing.",
+      "The part I'm proudest of is a code check that verifies LLM claims against the actual product specs before they ship — it caught a fabricated claim live, exactly the failure mode it was built to catch. The pipeline's JSON data contracts are validated end-to-end through 82 tests plus live OpenAI checks.",
     ],
     links: {},
   },
@@ -40,16 +40,16 @@ export const projects = [
     title: "CineVillage — a cinema platform that doesn't double-book",
     tag: "Full-Stack",
     summary:
-      "A full-stack cinema booking platform with a role-based admin console and a customer SPA, built to stay correct under concurrent checkout.",
+      "A fully simulated cinema chain, modeled on players like Shaw Theatres — an EJS admin console plus a React customer app, with real-time movie data and a complete Stripe checkout flow.",
     role: "Full-Stack Development",
-    stack: "Node.js, Express, MongoDB, React, Vite, EJS",
+    stack: "Node.js, Express, MongoDB, React, Vite, EJS, Stripe",
     impact: "Race-condition-safe checkout",
     timeline: "Feb 2026 – Apr 2026",
     featured: false,
     body: [
-      "CineVillage is a full-stack cinema booking platform — a role-based admin console (EJS) for managing showtimes and a React/Vite booking SPA for customers, both backed by a shared MongoDB model synced against the OMDb API for movie data.",
+      "CineVillage simulates a fully operational cinema chain, modeled on real players like Shaw Theatres — split into a role-based EJS admin console for managing showtimes and content, and a fully separate React customer-facing app for browsing and booking. Both pull real-time movie data and trailers from the OMDb API.",
+      "The booking flow runs start to finish: seat selection, booking, promo codes, food and drinks add-ons, and checkout through Stripe. A confirmed booking sends a QR-code e-ticket to the customer's email via SMTP.",
       "The hardest part wasn't the UI — it was making checkout safe under concurrency. I prevented race-condition double-booking using a MongoDB partial unique index plus transactional writes, and verified it held up under concurrent-request testing rather than just trusting it in theory.",
-      "Checkout is end-to-end from there: mocked payment validation, booking finalization, and automated QR-code e-ticket delivery.",
     ],
     links: {},
   },
