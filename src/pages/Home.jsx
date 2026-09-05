@@ -8,6 +8,8 @@ import {
   Terminal,
   LineChart,
   Code2,
+  Bot,
+  Workflow,
   GraduationCap,
   Briefcase,
   Trophy,
@@ -120,18 +122,19 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <div className="w-11 h-11 rounded-2xl bg-white flex items-center justify-center mb-6">
-                <Brain className="w-5 h-5 text-black" />
+                <Bot className="w-5 h-5 text-black" />
               </div>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-white">
-                Machine learning, from research to production.
+                AI engineering — the harness around the model.
               </h2>
               <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-                Two years deep in applied ML — computer vision, NLP, and
-                increasingly, how large models reason under constraints. I
-                care about models that hold up outside the notebook.
+                Hands-on with RAG pipelines, agentic tool-calling, and
+                prompt/context engineering — building the systems that make
+                LLMs reliable enough to trust with real workflows, not just
+                impressive in a demo.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["PyTorch", "TensorFlow", "scikit-learn", "CUDA"].map((t) => (
+                {["Ollama", "Dify", "ChromaDB", "HuggingFace", "Whisper"].map((t) => (
                   <span
                     key={t}
                     className="text-xs font-medium text-zinc-300 border border-zinc-700 rounded-full px-3 py-1"
@@ -142,28 +145,29 @@ export default function Home() {
               </div>
             </div>
             <div className="h-64 rounded-3xl bg-black border border-zinc-800 flex items-center justify-center">
-              <LineChart className="w-16 h-16 text-zinc-700" strokeWidth={1} />
+              <Workflow className="w-16 h-16 text-zinc-700" strokeWidth={1} />
             </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="h-64 rounded-3xl bg-black border border-zinc-800 flex items-center justify-center order-2 md:order-1">
-              <Code2 className="w-16 h-16 text-zinc-700" strokeWidth={1} />
+              <LineChart className="w-16 h-16 text-zinc-700" strokeWidth={1} />
             </div>
             <div className="order-1 md:order-2">
               <div className="w-11 h-11 rounded-2xl bg-white flex items-center justify-center mb-6">
-                <Terminal className="w-5 h-5 text-black" />
+                <Brain className="w-5 h-5 text-black" />
               </div>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-white">
-                Software engineering that carries the weight.
+                Machine learning, from the ground up.
               </h2>
               <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-                A model is only as useful as the system around it. I write
-                the APIs, pipelines, and infra that let a model actually
-                reach a user.
+                Deepening my grip on core ML — support vector machines,
+                neural networks, reinforcement learning — through NUS
+                coursework and independent study, alongside the classical
+                toolkit for getting from data to a working model.
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Python", "TypeScript", "Docker", "AWS"].map((t) => (
+                {["scikit-learn", "spaCy", "Pandas"].map((t) => (
                   <span
                     key={t}
                     className="text-xs font-medium text-zinc-300 border border-zinc-700 rounded-full px-3 py-1"
@@ -172,6 +176,45 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="w-11 h-11 rounded-2xl bg-white flex items-center justify-center mb-6">
+                <Terminal className="w-5 h-5 text-black" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-white">
+                Software engineering that carries the weight.
+              </h2>
+              <p className="text-zinc-400 text-lg leading-relaxed mb-6">
+                An agent or a model is only as useful as the system around
+                it. I write the APIs, services, and infrastructure — from
+                Rust backends to React frontends — that let it actually
+                reach a user.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  "JavaScript",
+                  "TypeScript",
+                  "React",
+                  "Django",
+                  "Rust",
+                  "SQL",
+                  "PostgreSQL",
+                  "Docker",
+                ].map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs font-medium text-zinc-300 border border-zinc-700 rounded-full px-3 py-1"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="h-64 rounded-3xl bg-black border border-zinc-800 flex items-center justify-center">
+              <Code2 className="w-16 h-16 text-zinc-700" strokeWidth={1} />
             </div>
           </div>
         </div>
