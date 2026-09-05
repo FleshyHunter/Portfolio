@@ -75,19 +75,21 @@ export default function Home() {
             className="hero-in mt-6 text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed"
             style={{ animationDelay: "0.3s" }}
           >
-            I build machine learning systems that ship — from research
-            prototypes to production APIs. Currently exploring how models
-            reason, not just predict.
+            I build AI systems that ship RAG pipelines, agentic tools, and
+            the infrastructure that holds them together. Right now I'm
+            exploring newer AI engineering techniques through hands-on
+            projects while deepening my grip on core ML — support vector
+            machines, neural networks, reinforcement learning.
           </p>
           <div
             className="hero-in mt-9 flex items-center justify-center gap-6"
             style={{ animationDelay: "0.45s" }}
           >
             <a
-              href="#work"
+              href="#projects"
               className="bg-white text-black text-sm font-medium rounded-full px-6 py-2.5 hover:bg-zinc-200 transition-colors"
             >
-              View my work
+              View my projects
             </a>
             <a
               href="#contact"

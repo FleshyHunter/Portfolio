@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NAV_LINKS = [
-  { label: "Work", href: "/#work" },
   { label: "About", href: "/#about" },
+  { label: "Projects", href: "/#projects" },
   { label: "Experience", href: "/#experience" },
   { label: "Contact", href: "/#contact" },
 ];
