@@ -9,6 +9,24 @@
       content="Aaron Lim — AI/ML Engineer, NUS Business Artificial Intelligence Systems. Portfolio of AI engineering, machine learning and software projects."
     />
     <!--
+      Sets the `dark` class on <html> before React mounts, so a
+      system-dark or previously-toggled visitor doesn't see a flash of
+      the wrong theme. Mirrors ThemeContext.jsx's getInitialTheme logic —
+      keep the two in sync if that logic changes.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var dark =
+            stored === "dark" ||
+            (stored !== "light" &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+    <!--
       Restores the real URL after the 404.html redirect trick (public/404.html).
       Only ever fires on GitHub Pages when a deep link was hit directly; it's an
       inert no-op on Vercel or any host that doesn't use that redirect.

@@ -1,13 +1,16 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { ThemeProvider } from "../../context/ThemeContext.jsx";
 import Home from "../Home.jsx";
 
 function renderHome() {
   return render(
-    <MemoryRouter>
-      <Home />
-    </MemoryRouter>
+    <ThemeProvider>
+      <MemoryRouter>
+        <Home />
+      </MemoryRouter>
+    </ThemeProvider>
   );
 }
 

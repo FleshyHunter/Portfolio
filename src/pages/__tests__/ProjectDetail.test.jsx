@@ -1,16 +1,19 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "../../context/ThemeContext.jsx";
 import ProjectDetail from "../ProjectDetail.jsx";
 import { projects } from "../../data/projects.js";
 
 function renderAtSlug(slug) {
   return render(
-    <MemoryRouter initialEntries={[`/work/${slug}`]}>
-      <Routes>
-        <Route path="/work/:slug" element={<ProjectDetail />} />
-      </Routes>
-    </MemoryRouter>
+    <ThemeProvider>
+      <MemoryRouter initialEntries={[`/work/${slug}`]}>
+        <Routes>
+          <Route path="/work/:slug" element={<ProjectDetail />} />
+        </Routes>
+      </MemoryRouter>
+    </ThemeProvider>
   );
 }
 
