@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="border-t border-gray-200 dark:border-zinc-900 py-8 px-6 bg-white dark:bg-black">
       <div className="max-w-5xl mx-auto flex items-center justify-between">
         <p className="text-xs text-gray-400 dark:text-zinc-600">
-          © 2026 Aaron Lim. Built with React &amp; Tailwind.
+          © 2026 Aaron Lim Yan Da
         </p>
         <div className="flex items-center gap-4">
           <a

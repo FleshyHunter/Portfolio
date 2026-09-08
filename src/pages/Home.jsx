@@ -19,6 +19,7 @@ import NeuralGraphic from "../components/NeuralGraphic.jsx";
 import TraversalGraphic from "../components/TraversalGraphic.jsx";
 import SVMGraphic from "../components/SVMGraphic.jsx";
 import TerminalGraphic from "../components/TerminalGraphic.jsx";
+import TypewriterText from "../components/TypewriterText.jsx";
 import { featuredProject, sideProjects } from "../data/projects.js";
 import { experiences } from "../data/experience.js";
 
@@ -56,8 +57,20 @@ export default function Home() {
         }
         .orb-float { animation: floatOrb 7s ease-in-out infinite; }
         .hero-in { animation: fadeInUp 0.9s cubic-bezier(0.16,1,0.3,1) both; }
+        @keyframes profileGlowLight {
+          0%, 100% { box-shadow: 0 0 14px 2px rgba(37, 99, 235, 0.35); }
+          50% { box-shadow: 0 0 26px 6px rgba(37, 99, 235, 0.55); }
+        }
+        @keyframes profileGlowDark {
+          0%, 100% { box-shadow: 0 0 14px 2px rgba(59, 130, 246, 0.35); }
+          50% { box-shadow: 0 0 26px 6px rgba(59, 130, 246, 0.6); }
+        }
+        .profile-glow { animation: profileGlowLight 3s ease-in-out infinite; }
+        .dark .profile-glow { animation: profileGlowDark 3s ease-in-out infinite; }
         @media (prefers-reduced-motion: reduce) {
           .orb-float, .hero-in { animation: none !important; }
+          .profile-glow { animation: none !important; box-shadow: 0 0 14px 2px rgba(37, 99, 235, 0.35); }
+          .dark .profile-glow { box-shadow: 0 0 14px 2px rgba(59, 130, 246, 0.35); }
         }
       `}</style>
 
@@ -123,11 +136,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ABOUT ME */}
+      <section id="about" className="bg-white dark:bg-black py-24 md:py-28 px-6">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-5xl md:text-6xl font-semibold tracking-tight mb-10 text-gray-900 dark:text-white">
+            About
+          </h2>
+          <img
+            src="/Aaron.jpg"
+            alt="Aaron Lim"
+            className="profile-glow w-48 h-48 rounded-full object-cover mx-auto mb-8"
+          />
+          <TypewriterText
+            text="Curious how things work, driven to make them better. I'm a Year 3 at NUS, studying Business and Artificial Intelligence Systems. Right now that means going deep on neural networks and reinforcement learning, and exploring agentic loops, context engineering, and AI harnesses through hands-on projects. What interests me most is where AI can responsibly take over the repetitive parts of a workflow without losing the human judgment that actually matters."
+            className="text-gray-500 dark:text-zinc-400 text-lg leading-relaxed"
+          />
+        </div>
+      </section>
+
       {/* WHAT I DO */}
-      <section id="about" className="bg-gray-50 dark:bg-zinc-950 py-24 md:py-28 px-6 border-t border-gray-200 dark:border-zinc-900">
+      <section id="focus" className="bg-gray-50 dark:bg-zinc-950 py-24 md:py-28 px-6 border-t border-gray-200 dark:border-zinc-900">
         <div className="max-w-5xl mx-auto space-y-24">
           <h2 className="text-5xl md:text-6xl font-semibold tracking-tight text-gray-900 dark:text-white">
-            About
+            Focus
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -136,7 +167,7 @@ export default function Home() {
                 <Bot className="w-5 h-5 text-white dark:text-black" />
               </div>
               <h3 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-gray-900 dark:text-white">
-                AI engineering — the harness around the model.
+                AI engineering that builds the harness around the model.
               </h3>
               <p className="text-gray-500 dark:text-zinc-400 text-lg leading-relaxed mb-6">
                 Hands-on with RAG pipelines, agentic tool-calling, and
@@ -181,10 +212,10 @@ export default function Home() {
                 Machine learning, from the ground up.
               </h3>
               <p className="text-gray-500 dark:text-zinc-400 text-lg leading-relaxed mb-6">
-                Deepening my grip on core ML — support vector machines,
-                neural networks, reinforcement learning — through NUS
-                coursework and independent study, alongside the classical
-                toolkit for getting from data to a working model.
+                Deepening my grip on core ML such as support vector machines,
+                neural networks, reinforcement learning and more, through independent studies, 
+                projects and coursework, alongside classical
+                toolkits for getting from data to a working model.
               </p>
               <div className="flex flex-wrap gap-2">
                 {["scikit-learn", "spaCy", "Pandas"].map((t) => (
@@ -209,8 +240,7 @@ export default function Home() {
               </h3>
               <p className="text-gray-500 dark:text-zinc-400 text-lg leading-relaxed mb-6">
                 An agent or a model is only as useful as the system around
-                it. I write the APIs, services, and infrastructure — from
-                Rust backends to React frontends — that let it actually
+                it. I write the APIs, services, and infrastructure that let it actually
                 reach a user.
               </p>
               <div className="flex flex-wrap gap-2">

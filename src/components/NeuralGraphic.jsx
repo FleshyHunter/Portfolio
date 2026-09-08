@@ -1,29 +1,9 @@
 import React, { useState, useEffect } from "react";
+import usePrefersReducedMotion from "../hooks/usePrefersReducedMotion.js";
 
 const LAYER1 = [50, 130, 210];
 const LAYER2 = [20, 90, 160, 230];
 const LAYER3 = [70, 170];
-
-function usePrefersReducedMotion() {
-  const [reduced, setReduced] = useState(
-    () =>
-      typeof window !== "undefined" &&
-      typeof window.matchMedia === "function" &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  );
-
-  useEffect(() => {
-    if (typeof window === "undefined" || typeof window.matchMedia !== "function") {
-      return;
-    }
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const onChange = () => setReduced(mq.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
-  }, []);
-
-  return reduced;
-}
 
 // Cycles through a random input -> hidden -> output path, phase by phase:
 // 0 idle/settling, 1 edge1 lit, 2-4 hidden node lit (spans edge2 too), 3
