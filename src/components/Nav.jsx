@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { useTheme } from "../context/ThemeContext.jsx";
+import LogoMark from "./LogoMark.jsx";
 
 const NAV_LINKS = [
   { label: "About", id: "about" },
@@ -35,8 +36,9 @@ export default function Nav() {
         <Link
           to="/"
           onClick={() => setMobileOpen(false)}
-          className="text-sm font-semibold tracking-tight text-gray-900 dark:text-white"
+          className="flex items-center gap-2 text-sm font-semibold tracking-tight text-gray-900 dark:text-white"
         >
+          <LogoMark className="w-8 h-8" />
           Aaron Lim
         </Link>
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-500 dark:text-zinc-400">
